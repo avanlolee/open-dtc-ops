@@ -12,11 +12,31 @@ license = { text = "MIT" }
 authors = [
   { name = "open-dtc-ops contributors" }
 ]
+keywords = ["ecommerce", "dtc", "marketplace", "csv", "roi", "inventory", "profitability"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business",
+  "Topic :: Utilities"
+]
 dependencies = [
   "pandas>=2.0,<2.4",
   "rich>=13.0,<14.0",
   "typer>=0.12,<0.13"
 ]
+
+[project.urls]
+Homepage = "https://github.com/avanlolee/open-dtc-ops"
+Repository = "https://github.com/avanlolee/open-dtc-ops"
+Issues = "https://github.com/avanlolee/open-dtc-ops/issues"
+Changelog = "https://github.com/avanlolee/open-dtc-ops/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

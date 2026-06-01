@@ -14,11 +14,11 @@
 - Add CLI smoke tests that run commands against sample files.
 - Add marketplace-specific CSV examples for Amazon, Walmart, TikTok Shop, and Shopify.
 - Improve numeric validation for blank, negative, and non-numeric values.
-- Prepare a GitHub Release for `v0.1.0`.
+- Keep release notes and package metadata ready for future publishing.
 
 ## Later
 
-- Publish package to PyPI after install and CLI behavior are stable.
+- Publish package to PyPI after install and CLI smoke tests are stable.
 - More marketplace CSV presets.
 - Optional Google Sheets formulas.
 - Lightweight release automation.
