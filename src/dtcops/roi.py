@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from dtcops.validators import validate_required_columns
+from dtcops.validators import validate_numeric_columns, validate_required_columns
 
 SALES_COLUMNS = [
     "date",
@@ -18,6 +18,18 @@ SALES_COLUMNS = [
 
 def calculate_roi(dataframe: pd.DataFrame) -> dict[str, float | str]:
     validate_required_columns(dataframe, SALES_COLUMNS, "Sales CSV")
+    validate_numeric_columns(
+        dataframe,
+        [
+            "revenue",
+            "ad_spend",
+            "cogs",
+            "shipping",
+            "platform_fee",
+            "units_sold",
+        ],
+        "Sales CSV",
+    )
 
     total_revenue = float(dataframe["revenue"].sum())
     total_ad_spend = float(dataframe["ad_spend"].sum())

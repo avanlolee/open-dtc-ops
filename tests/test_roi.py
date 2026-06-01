@@ -1,6 +1,8 @@
 import pandas as pd
+import pytest
 
 from dtcops.roi import calculate_roi
+from dtcops.validators import CSVValidationError
 
 
 def test_calculate_roi_summary():
@@ -29,3 +31,20 @@ def test_calculate_roi_summary():
     assert result["break_even_acos"] == 0.55
     assert result["status"] == "Profitable"
 
+
+def test_calculate_roi_rejects_invalid_numeric_values():
+    dataframe = pd.DataFrame(
+        {
+            "date": ["2026-05-01"],
+            "product": ["Organizer"],
+            "revenue": [""],
+            "ad_spend": [20.0],
+            "cogs": [30.0],
+            "shipping": [10.0],
+            "platform_fee": [5.0],
+            "units_sold": [2],
+        }
+    )
+
+    with pytest.raises(CSVValidationError, match="blank value.*revenue"):
+        calculate_roi(dataframe)
