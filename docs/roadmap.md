@@ -8,12 +8,20 @@
 - Product research scorecard.
 - Beginner-friendly docs and sample files.
 
+## Next
+
+- Export analyzed results to CSV.
+- Add CLI smoke tests that run commands against sample files.
+- Add marketplace-specific CSV examples for Amazon, Walmart, TikTok Shop, and Shopify.
+- Improve numeric validation for blank, negative, and non-numeric values.
+- Prepare a GitHub Release for `v0.1.0`.
+
 ## Later
 
+- Publish package to PyPI after install and CLI behavior are stable.
 - More marketplace CSV presets.
-- Export analyzed results to CSV.
-- More robust numeric validation.
 - Optional Google Sheets formulas.
+- Lightweight release automation.
 
 ## Not Planned For MVP
 
@@ -22,4 +30,3 @@
 - Scraping.
 - Platform login automation.
 - Private business data storage.
-
