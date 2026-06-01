@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-dtc-ops"
+version = "0.1.0"
+description = "CSV-based ecommerce operations toolkit for small DTC and marketplace sellers."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "open-dtc-ops contributors" }
+]
+dependencies = [
+  "pandas>=2.0,<2.4",
+  "rich>=13.0,<14.0",
+  "typer>=0.12,<0.13"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<9.0"
+]
+
+[project.scripts]
+dtcops = "dtcops.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
