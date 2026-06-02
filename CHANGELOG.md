@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format follows a simple, human-readable release log. This project uses semantic versioning once releases begin.
 
+## Unreleased
+
+### Added
+
+- CLI smoke tests that run every sample command against the sample CSV files.
+
 ## [0.1.0] - 2026-06-01
 
 ### Added
@@ -22,4 +28,3 @@ The format follows a simple, human-readable release log. This project uses seman
 
 - This is an MVP for local CSV analysis only.
 - No database, web dashboard, scraping, platform login automation, or private seller data storage is included.
-
