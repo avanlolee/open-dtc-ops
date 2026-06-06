@@ -11,10 +11,10 @@
 ## Next
 
 - Export analyzed results to CSV.
-- Add CLI smoke tests that run commands against sample files.
 - Add marketplace-specific CSV examples for Amazon, Walmart, TikTok Shop, and Shopify.
 - Improve numeric validation for blank, negative, and non-numeric values.
 - Keep release notes and package metadata ready for future publishing.
+- Convert the public maintenance backlog into GitHub issues and keep it current as issues are completed.
 
 ## Later
 

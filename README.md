@@ -1,5 +1,9 @@
 # open-dtc-ops
 
+[![CI](https://github.com/avanlolee/open-dtc-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/avanlolee/open-dtc-ops/actions/workflows/ci.yml)
+[![Python Versions](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://github.com/avanlolee/open-dtc-ops)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Open-source ecommerce operations toolkit for small DTC and marketplace sellers.
 
 `open-dtc-ops` helps non-technical ecommerce operators analyze CSV exports for ad ROI, profitability, inventory risk, and product research scoring.
@@ -39,6 +43,8 @@ This project keeps the workflow simple: local CSV files, transparent formulas, a
 
 Use sample CSV files or your own local exports with the documented columns.
 
+For concrete operator workflows, see `docs/demo-cases.md`.
+
 ## Install
 
 ```bash
@@ -60,6 +66,8 @@ dtcops score examples/product_research_sample.csv
 pytest
 ```
 
+CI runs the test suite and all sample CLI commands across Python 3.9, 3.10, 3.11, and 3.12.
+
 ## Maintainer Automation
 
 This repository is designed to be maintainable by Codex-style coding agents:
@@ -73,9 +81,13 @@ This repository is designed to be maintainable by Codex-style coding agents:
 
 Good future agent tasks include adding CSV export, adding marketplace-specific sample formats, expanding tests, and improving documentation without adding scraping, platform login automation, a database, or a dashboard.
 
+Maintainer responsibilities are documented in `MAINTAINERS.md`. Security reporting and scope are documented in `SECURITY.md`.
+
+The public maintenance backlog is documented in `docs/maintenance-backlog.md` so contributors can pick up small, useful issues. Ready-to-publish issue drafts are available in `docs/github-issue-drafts.md`.
+
 ## Release Status
 
-The first MVP is versioned as `0.1.0`. See `CHANGELOG.md` for release notes and the roadmap for planned improvements.
+The first MVP is versioned as `0.1.0` and tagged as `v0.1.0`. See `CHANGELOG.md` and `docs/release-notes-v0.1.0.md` for release notes, and the roadmap for planned improvements.
 
 ## License
 

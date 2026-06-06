@@ -9,6 +9,14 @@ The format follows a simple, human-readable release log. This project uses seman
 ### Added
 
 - CLI smoke tests that run every sample command against the sample CSV files.
+- Python 3.9, 3.10, 3.11, and 3.12 CI matrix with CLI smoke tests.
+- Maintainer responsibility documentation in `MAINTAINERS.md`.
+- Security reporting and scope documentation in `SECURITY.md`.
+- Project health badges in `README.md`.
+- Public demo cases that connect CLI output to operator decisions.
+- Public maintenance backlog with ready-to-file GitHub issues.
+- Draft release notes for `v0.1.0`.
+- Maintenance task issue template and ready-to-publish GitHub issue drafts.
 
 ## [0.1.0] - 2026-06-01
 
