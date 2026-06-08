@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from dtcops.validators import validate_required_columns
+from dtcops.validators import validate_numeric_columns, validate_required_columns
 
 INVENTORY_COLUMNS = [
     "product",
@@ -15,6 +15,16 @@ INVENTORY_COLUMNS = [
 
 def calculate_inventory(dataframe: pd.DataFrame) -> list[dict[str, float | str]]:
     validate_required_columns(dataframe, INVENTORY_COLUMNS, "Inventory CSV")
+    validate_numeric_columns(
+        dataframe,
+        [
+            "current_inventory",
+            "avg_daily_sales",
+            "lead_time_days",
+            "safety_stock",
+        ],
+        "Inventory CSV",
+    )
 
     results: list[dict[str, float | str]] = []
     for _, row in dataframe.iterrows():

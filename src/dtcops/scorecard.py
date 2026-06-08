@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from dtcops.validators import validate_required_columns
+from dtcops.validators import validate_numeric_columns, validate_required_columns
 
 PRODUCT_RESEARCH_COLUMNS = [
     "product",
@@ -25,6 +25,11 @@ SCORE_WEIGHTS = {
 def calculate_scorecard(dataframe: pd.DataFrame) -> list[dict[str, float | str]]:
     validate_required_columns(
         dataframe, PRODUCT_RESEARCH_COLUMNS, "Product research CSV"
+    )
+    validate_numeric_columns(
+        dataframe,
+        list(SCORE_WEIGHTS),
+        "Product research CSV",
     )
 
     results: list[dict[str, float | str]] = []
